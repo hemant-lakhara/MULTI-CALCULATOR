@@ -1,8 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:lottie/lottie.dart';
 
+import 'login_page.dart';
 import 'my_calculator.dart';
 
 
@@ -19,7 +22,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 2),(){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Calculation()));
+      //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Calculation()));
+      Get.to(LoginPage());
     });
   }
   @override
